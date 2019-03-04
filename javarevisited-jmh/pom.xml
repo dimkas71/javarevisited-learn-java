@@ -9,7 +9,6 @@
     </parent>
     <groupId>ua.compserv.javarevisited.jmh</groupId>
     <artifactId>javarevisited-jmh</artifactId>
-    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>Auto-generated JMH benchmark</name>
@@ -25,6 +24,11 @@
             <artifactId>jmh-generator-annprocess</artifactId>
             <version>${jmh.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+        	<groupId>ua.compserv.javarevisited</groupId>
+        	<artifactId>core-java-javarevisited</artifactId>
+        	<version>1.0</version>
         </dependency>
     </dependencies>
 
@@ -61,7 +65,7 @@
                             <finalName>${uberjar.name}</finalName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>ua.compserv.javarevisited.jmh.MyBenchmark</mainClass>
+                                    <mainClass>ua.compserv.javarevisited.jmh.StringExtensionsBenchmark</mainClass>
                                 </transformer>
                             </transformers>
                             <filters>
