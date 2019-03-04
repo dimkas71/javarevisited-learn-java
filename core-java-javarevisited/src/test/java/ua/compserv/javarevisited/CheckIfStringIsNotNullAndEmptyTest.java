@@ -38,15 +38,15 @@ class CheckIfStringIsNotNullAndEmptyTest {
 class StringExtensions {
 	public static boolean isNotNullAndEmptyThroughIsEmpty(String checked) {
 		
-		return checked != null ? !checked.replaceAll(" ", "").isEmpty() : false;
+		return checked != null ? !checked.trim().isEmpty() : false;
 	}
 	
 	public static boolean isNotNullAndEmptyThroughIsEmpty2(String checked) {
-		return (checked != null) && (!checked.replaceAll(" ", "").isEmpty());
+		return (checked != null) && (!checked.trim().isEmpty());
 	}
 	
 	public static boolean isNotNullAndEmptyThroughLength(String checked) {
-		return checked != null ? checked.replaceAll(" ", "").length() > 0 : false;
+		return checked != null ? checked.trim().length() > 0 : false;
 	}
 	
 }
